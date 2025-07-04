@@ -213,8 +213,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **Chouaib Saad**
-- Mail: choiyebsaad2000@gmail.com
 - GitHub: [@chouaib-saad](https://github.com/chouaib-saad)
+- Mail: choiyebsaad2000@gmail.com
 - Project Link: [https://github.com/chouaib-saad/Interview-Simulation-App](https://github.com/chouaib-saad/Interview-Simulation-App)
 
 
