@@ -210,8 +210,6 @@ For major changes, please open an issue first to discuss what you would like to 
 
 # License
 
-MIT
-
 Developed with Angular 19+ by **Chouaib Saad**.
 
 ---
