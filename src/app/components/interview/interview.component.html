@@ -1,0 +1,45 @@
+<div class="interview-container fullscreen-overlay" 
+     [ngClass]="{'thinking-phase': isThinkingPhase}">
+  
+  <div class="interview-header">
+    <div class="progress-bar">
+      <div class="progress-fill" [style.width.%]="progress"></div>
+    </div>
+    
+    <div class="timer-section">
+      <div class="timer" [ngClass]="{'warning': countdown <= 3}">
+        {{ countdown }}
+      </div>
+      <span class="timer-label">seconds remaining</span>
+    </div>
+  </div>
+
+  <div class="interview-content">
+    <div class="question-section" *ngIf="currentQuestion && !isThinkingPhase">
+      <div class="question-number">
+        Question {{ currentQuestionIndex + 1 }} of {{ questions.length }}
+      </div>
+      <div class="question-text fade-in">
+        {{ currentQuestion.question }}
+      </div>
+    </div>
+
+    <div class="thinking-section" *ngIf="isThinkingPhase">
+      <div class="thinking-text fade-in">
+        <h2>Thinking Time</h2>
+        <p>Take a moment to prepare for the next question</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="interview-footer">
+    <div class="instruction-text">
+      <span *ngIf="!isThinkingPhase">Please answer the question above</span>
+      <span *ngIf="isThinkingPhase">Get ready for the next question</span>
+    </div>
+    
+    <div class="warning-text">
+      ⚠️ Do not switch tabs or windows - this will end the interview
+    </div>
+  </div>
+</div>

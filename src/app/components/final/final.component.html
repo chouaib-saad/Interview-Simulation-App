@@ -1,0 +1,44 @@
+<div class="final-container">
+  <div class="success-card fade-in">
+    <div class="success-icon">
+      ✅
+    </div>
+    
+    <h1 class="success-title">
+      Congratulations!
+    </h1>
+    
+    <p class="success-message">
+      You have successfully completed the interview
+    </p>
+    
+    <div class="completion-details">
+      <div class="detail-item">
+        <span class="detail-label">Questions Answered:</span>
+        <span class="detail-value">4/4</span>
+      </div>
+      
+      <div class="detail-item">
+        <span class="detail-label">Status:</span>
+        <span class="detail-value success">Completed</span>
+      </div>
+      
+      <div class="detail-item">
+        <span class="detail-label">Duration:</span>
+        <span class="detail-value">{{ durationString }}</span>
+      </div>
+    </div>
+    
+    <div class="final-message">
+      <p>
+        Thank you for participating in this interview simulation. 
+        Your responses have been recorded and you will be contacted 
+        with the next steps.
+      </p>
+    </div>
+    
+    <button class="btn btn-primary reset-btn" (click)="resetInterview()">
+      Start New Interview
+    </button>
+  </div>
+</div>
