@@ -85,18 +85,46 @@
   color: #059669;
 }
 
+/* Fraud Detection Styles */
+.final-container.fraud-detected {
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+}
+
+.success-card.fraud-card {
+  background: #fef2f2;
+  border: 2px solid #dc2626;
+}
+
+.success-title.fraud-title {
+  color: #dc2626;
+}
+
+.success-message.fraud-message {
+  color: #991b1b;
+}
+
+.completion-details.fraud-details {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+}
+
+.detail-value.fraud-status {
+  color: #dc2626;
+  font-weight: 700;
+}
+
 .final-message {
   background: rgba(5, 150, 105, 0.1);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   border: 1px solid rgba(5, 150, 105, 0.2);
 }
 
-.final-message p {
-  color: #4b5563;
-  line-height: 1.6;
-  margin: 0;
+.final-message.fraud-final-message {
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  margin-bottom: 3rem;
 }
 
 .reset-btn {
@@ -115,6 +143,15 @@
 .reset-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+}
+
+.reset-btn.fraud-btn {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.reset-btn.fraud-btn:hover {
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
 }
 
 @media (max-width: 768px) {

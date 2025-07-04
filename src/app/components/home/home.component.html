@@ -1,9 +1,11 @@
 <div class="home-container">
-  <div class="welcome-section">
-    <h1 class="title fade-in">Interview Simulation</h1>
-    <p class="subtitle fade-in">Welcome to your virtual interview experience</p>
-    
-    <div class="button-section slide-up">
+  <div class="content-wrapper">
+    <div class="welcome-section">
+      <h1 class="title">Interview Simulation</h1>
+      <p class="subtitle">Welcome to your virtual interview experience</p>
+    </div>
+
+    <div class="button-section">
       <button 
         class="btn btn-primary take-interview-btn"
         [disabled]="isButtonDisabled"
@@ -11,32 +13,32 @@
         <span *ngIf="!isButtonDisabled">Take Interview</span>
         <span *ngIf="isButtonDisabled">Interview Completed</span>
       </button>
-      
+
       <p class="note" *ngIf="!isButtonDisabled">
         Once you start, you'll have 10 seconds to answer each question. 
         Make sure you're ready and focused!
       </p>
-      
+
       <p class="note completed" *ngIf="isButtonDisabled">
         You have already completed the interview. Thank you!
       </p>
     </div>
-  </div>
-  
-  <div class="features-section">
-    <div class="feature-card">
-      <h3>📝 4 Questions</h3>
-      <p>Answer 4 carefully selected questions</p>
-    </div>
-    
-    <div class="feature-card">
-      <h3>⏱️ Timed</h3>
-      <p>10 seconds per question</p>
-    </div>
-    
-    <div class="feature-card">
-      <h3>🎯 Focused</h3>
-      <p>Stay focused - switching tabs ends the interview</p>
+
+    <div class="features-section">
+      <div class="feature-card">
+        <h3>4 Questions</h3>
+        <p>Answer 4 carefully selected questions</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Timed</h3>
+        <p>10 seconds per question</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Focused</h3>
+        <p>Stay focused - switching tabs ends the interview</p>
+      </div>
     </div>
   </div>
 </div>

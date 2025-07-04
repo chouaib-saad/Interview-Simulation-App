@@ -1,26 +1,28 @@
-<div class="final-container">
-  <div class="success-card fade-in">
+<div class="final-container" [ngClass]="{'fraud-detected': isFraudDetected}">
+  <div class="success-card fade-in" [ngClass]="{'fraud-card': isFraudDetected}">
     <div class="success-icon">
-      ✅
+      {{ isFraudDetected ? '⚠️' : '✅' }}
     </div>
     
-    <h1 class="success-title">
-      Congratulations!
+    <h1 class="success-title" [ngClass]="{'fraud-title': isFraudDetected}">
+      {{ isFraudDetected ? 'Fraud Detected!' : 'Congratulations!' }}
     </h1>
     
-    <p class="success-message">
-      You have successfully completed the interview
+    <p class="success-message" [ngClass]="{'fraud-message': isFraudDetected}">
+      {{ isFraudDetected ? 'Suspicious activity detected during the interview' : 'You have successfully completed the interview' }}
     </p>
     
-    <div class="completion-details">
+    <div class="completion-details" [ngClass]="{'fraud-details': isFraudDetected}">
       <div class="detail-item">
         <span class="detail-label">Questions Answered:</span>
-        <span class="detail-value">4/4</span>
+        <span class="detail-value">{{ answered }}/4</span>
       </div>
       
       <div class="detail-item">
         <span class="detail-label">Status:</span>
-        <span class="detail-value success">Completed</span>
+        <span class="detail-value" [ngClass]="{'fraud-status': isFraudDetected, 'success': !isFraudDetected}">
+          {{ isFraudDetected ? 'Fraud Detected' : 'Completed' }}
+        </span>
       </div>
       
       <div class="detail-item">
@@ -29,15 +31,20 @@
       </div>
     </div>
     
-    <div class="final-message">
-      <p>
+    <div class="final-message" [ngClass]="{'fraud-final-message': isFraudDetected}">
+      <p *ngIf="!isFraudDetected">
         Thank you for participating in this interview simulation. 
         Your responses have been recorded and you will be contacted 
         with the next steps.
       </p>
+      <p *ngIf="isFraudDetected">
+        The interview has been flagged due to suspicious behavior such as 
+        tab switching or leaving the interview window. This activity has been 
+        recorded and reported.
+      </p>
     </div>
     
-    <button class="btn btn-primary reset-btn" (click)="resetInterview()">
+    <button class="btn btn-primary reset-btn" [ngClass]="{'fraud-btn': isFraudDetected}" (click)="resetInterview()">
       Start New Interview
     </button>
   </div>

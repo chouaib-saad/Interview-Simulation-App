@@ -46,6 +46,8 @@ export class InterviewComponent implements OnInit, OnDestroy {
   @HostListener('document:visibilitychange', ['$event'])
   onFocusLoss(): void {
     if (this.isInterviewActive) {
+      localStorage.setItem('fraudDetected', 'true');
+      localStorage.setItem('answeredQuestions', this.answeredCount.toString());
       this.terminateInterview();
     }
   }
@@ -82,6 +84,8 @@ export class InterviewComponent implements OnInit, OnDestroy {
         this.countdown--;
         
         if (this.countdown <= 0) {
+          // Increment answered count when question time expires
+          this.answeredCount++;
           this.nextQuestion();
         }
       });
@@ -113,32 +117,23 @@ export class InterviewComponent implements OnInit, OnDestroy {
   }
 
   private completeInterview(): void {
-    this.isInterviewActive = false;
-    this.clearTimer();
-    this.endTime = Date.now();
-    localStorage.setItem('interviewCompleted', 'true');
-    localStorage.removeItem('interviewStarted');
-    // Save stats for final screen
-    localStorage.setItem('interviewStats', JSON.stringify({
-      correctAnswers: this.correctAnswersCount,
-      answered: this.answeredCount,
-      total: this.questions.length,
-      duration: Math.floor((this.endTime - this.startTime) / 1000)
-    }));
-    this.router.navigate(['/final']);
-    this.isInterviewActive = false;
-    this.clearTimer();
-    localStorage.setItem('interviewCompleted', 'true');
-    localStorage.removeItem('interviewStarted');
+    this.endInterview();
     this.router.navigate(['/final']);
   }
 
   private terminateInterview(): void {
+    this.endInterview();
+    alert('Interview terminated due to focus loss. You will be redirected to the final screen.');
+    this.router.navigate(['/final']);
+  }
+
+  private endInterview(): void {
     this.isInterviewActive = false;
     this.clearTimer();
     this.endTime = Date.now();
     localStorage.setItem('interviewCompleted', 'true');
     localStorage.removeItem('interviewStarted');
+    
     // Save stats for final screen
     localStorage.setItem('interviewStats', JSON.stringify({
       correctAnswers: this.correctAnswersCount,
@@ -146,14 +141,6 @@ export class InterviewComponent implements OnInit, OnDestroy {
       total: this.questions.length,
       duration: Math.floor((this.endTime - this.startTime) / 1000)
     }));
-    alert('Interview terminated due to focus loss. You will be redirected to the final screen.');
-    this.router.navigate(['/final']);
-    this.isInterviewActive = false;
-    this.clearTimer();
-    localStorage.setItem('interviewCompleted', 'true');
-    localStorage.removeItem('interviewStarted');
-    alert('Interview terminated due to focus loss. You will be redirected to the final screen.');
-    this.router.navigate(['/final']);
   }
 
   private clearTimer(): void {
