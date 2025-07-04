@@ -2,7 +2,7 @@
 
 A sophisticated Angular application that simulates a timed video interview experience with advanced fraud detection and security features.
 
-## 🚀 Features
+##  Features
 
 ### Core Functionality
 - **One-time Interview**: Button can only be clicked once, persisted across browser sessions
@@ -25,7 +25,7 @@ A sophisticated Angular application that simulates a timed video interview exper
 - **Visual Feedback**: Timer warnings and state-based styling
 - **Completion Statistics**: Detailed results with fraud detection status
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 - **Framework**: Angular 19.x
 - **Language**: TypeScript
@@ -35,7 +35,7 @@ A sophisticated Angular application that simulates a timed video interview exper
 - **Routing**: Angular Router with guards
 - **Build Tool**: Angular CLI
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 src/
@@ -56,7 +56,7 @@ src/
 └── index.html               # Main HTML file
 ```
 
-## 🚦 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Node.js (v18 or higher)
@@ -89,7 +89,7 @@ src/
 5. **Open your browser**
    Navigate to `http://localhost:4200`
 
-## 🎮 Usage
+##  Usage
 
 ### Starting an Interview
 1. Click the "Take Interview" button on the home page
@@ -110,7 +110,7 @@ The application monitors for:
 - Attempt to close the browser
 - Manual navigation attempts
 
-## 📊 Features in Detail
+##  Features in Detail
 
 ### localStorage Persistence
 - `interviewStarted`: Tracks if interview has begun
@@ -128,7 +128,7 @@ The application monitors for:
 - Random selection algorithm
 - Error handling for loading failures
 
-## 🎨 Design Features
+##  Design Features
 
 ### Color Schemes
 - **Question Phase**: White to light gray gradient
@@ -142,7 +142,7 @@ The application monitors for:
 - Hover animations on interactive elements
 - Progress bar animations
 
-## 🔧 Configuration
+##  Configuration
 
 ### Question Format
 Questions are stored in `src/assets/questions.json`:
@@ -165,7 +165,7 @@ Questions are stored in `src/assets/questions.json`:
 - Thinking timer: 10 seconds
 - Warning threshold: ≤3 seconds
 
-## 🚀 Build & Deployment
+##  Build & Deployment
 
 ### Development Build
 ```bash
@@ -185,14 +185,14 @@ The application can be deployed to any static hosting service:
 - AWS S3
 - Firebase Hosting
 
-## 📱 Browser Compatibility
+##  Browser Compatibility
 
 - Chrome 90+
 - Firefox 88+
 - Safari 14+
 - Edge 90+
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -200,17 +200,17 @@ The application can be deployed to any static hosting service:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Angular team for the excellent framework
 - Community for best practices and patterns
 - Modern web standards for full-screen and focus APIs
 
-## 📞 Contact
+##  Contact
 
 **Chouaib Saad**
 - GitHub: [@chouaib-saad](https://github.com/chouaib-saad)
