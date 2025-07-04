@@ -187,10 +187,10 @@ The application can be deployed to any static hosting service:
 
 ## 📱 Browser Compatibility
 
-- Chrome 90+ ✅
-- Firefox 88+ ✅
-- Safari 14+ ✅
-- Edge 90+ ✅
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
 
 ## 🤝 Contributing
 
@@ -215,7 +215,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Chouaib Saad**
 - GitHub: [@chouaib-saad](https://github.com/chouaib-saad)
 - Project Link: [https://github.com/chouaib-saad/Interview-Simulation-App](https://github.com/chouaib-saad/Interview-Simulation-App)
+- Mail: choiyebsaad2000@gmail.com
+
 
 ---
 
-*Built with ❤️ using Angular and TypeScript*
+*Built using Angular and TypeScript*
