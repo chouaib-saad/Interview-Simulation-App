@@ -4,7 +4,7 @@ A modern, production-ready Angular application that simulates a timed interview 
 
 ---
 
-## 📚 Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -19,13 +19,13 @@ A modern, production-ready Angular application that simulates a timed interview 
 
 ---
 
-## 🧠 Overview
+##  Overview
 
 This app simulates a real-world technical interview with a limited number of questions, a countdown timer for each, and strict navigation rules. It is ideal for practicing under pressure or as a base for HR/assessment tools.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - **4 Random Interview Questions**: Pulled from a configurable `questions.json`.
 - **Timed Responses**: Each question is displayed for 10 seconds, followed by 10 seconds of thinking time with a smooth background color transition.
@@ -38,11 +38,11 @@ This app simulates a real-world technical interview with a limited number of que
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 
 <pre>
-  interview-simulation-app/
+interview-simulation-app/
 ├── angular.json
 ├── package.json
 ├── tsconfig*.json
@@ -73,7 +73,7 @@ A modern, production-ready Angular application that simulates a timed interview 
 
 ---
 
-## 📚 Table of Contents
+##  Table of Contents
 
 - [How It Works](#-how-it-works)
 - [Setup & Installation](#-setup--installation)
@@ -85,41 +85,41 @@ A modern, production-ready Angular application that simulates a timed interview 
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 
-### ✅ Home Screen
+### Home Screen
 
 - User sees a single **"Take Interview"** button.
 - Once clicked, the interview starts, and the button is disabled (persisted via `localStorage`).
 
-### 📋 Interview Flow
+### Interview Flow
 
 - 4 random questions shown one at a time, from `questions.json`.
 - Each question appears for **10 seconds**, followed by **10 seconds** of "thinking time" with a background transition.
 - Switching tabs/windows or trying to close the tab ends the interview immediately and redirects to the final screen.
 - Questions are fetched via a service with no repetition.
 
-### 🏁 Final Screen
+### Final Screen
 
 - Displays: "You have successfully completed the interview."
 - Shows basic completion stats (e.g., `Questions Answered: 4/4`).
 - Cannot retake the interview unless `localStorage` is cleared.
 
-### 🔐 Navigation Protection
+### Navigation Protection
 
 - Route guards block access to the home or interview screens post-completion.
 - Users are redirected to the final screen if they try to bypass.
 
 ---
 
-## 🛠️ Setup & Installation
+##  Setup & Installation
 
-### ✅ Prerequisites
+### Prerequisites
 
 - [Node.js](https://nodejs.org/) (v18+ recommended)
 - [Angular CLI](https://angular.io/cli) (v19+ recommended)
 
-### 📦 Installation
+### Installation
 
 ```bash
 # Clone the repository
@@ -132,30 +132,16 @@ npm install
 
 <pre>
 
-  | Command         | Description                     |
+| Command         | Description                     |
 | --------------- | ------------------------------- |
-| `npm start`     | Run the app in development mode |
-| `npm run build` | Build the app for production    |
-| `npm test`      | Run unit tests                  |
-| `ng serve`      | Alias for `npm start`           |
-| `ng build`      | Alias for `npm run build`       |
+| 'npm start'     | Run the app in development mode |
+| 'npm run build' | Build the app for production    |
+| 'npm test'      | Run unit tests                  |
+| 'ng serve'      | Alias for `npm start`           |
+| 'ng build'      | Alias for `npm run build`       |
 
   
 </pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ````markdown
@@ -226,6 +212,6 @@ For major changes, please open an issue first to discuss what you would like to 
 
 MIT
 
-Developed with Angular 19+ and ❤️ by **Chouaib Saad**.
+Developed with Angular 19+ by **Chouaib Saad**.
 
 ---
