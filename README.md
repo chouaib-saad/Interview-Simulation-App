@@ -137,8 +137,8 @@ npm install
 | 'npm start'     | Run the app in development mode |
 | 'npm run build' | Build the app for production    |
 | 'npm test'      | Run unit tests                  |
-| 'ng serve'      | Alias for `npm start`           |
-| 'ng build'      | Alias for `npm run build`       |
+| 'ng serve'      | Alias for 'npm start'           |
+| 'ng build'      | Alias for 'npm run build'       |
 
   
 </pre>
